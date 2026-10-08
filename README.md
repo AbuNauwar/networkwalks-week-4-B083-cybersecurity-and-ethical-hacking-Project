@@ -42,6 +42,20 @@ The cracking of password was achieved using networkwalks password cracker with a
 
 Finally, the content of the backup folder (Old) was revealed with the help of an AI tool ( ChatGPT)
 
+Risk Rating
+
+Successful sqlInjection on the website, access to the forgotten backup folder, and access to confidential staff salary and shareholders information were considered to be most critical vulnerabilities of the website. While Encrypted PDFs accessible after login bypass and Weak PDF passwords crackable with a wordlist were also considered to be high vulnerabilities, and Sensitive metadata left in patient PDF files and username enumeration were considered medium vulnerabilities. 
+
+Recommendations and Remediation
+
+•	Username enumeration: Show the same error message for a wrong username and a wrong password. Never reveal which one failed.
+•	SQL injection: Use parameterised queries or prepared statements. Never build SQL queries using raw user input.
+ 
+•	PDF access control: Store PDFs outside the web root or behind proper access controls. Use strong unique passwords per file.
+•	PDF metadata: Strip all metadata from patient files before distributing. Use exiftool -all= filename.pdf to clean files.
+•	Directory listing and backup exposure: Disable directory listing on all folders. Remove or relocate old backup files. Never store database backups in a public web folder.
+
+
 
 
 
