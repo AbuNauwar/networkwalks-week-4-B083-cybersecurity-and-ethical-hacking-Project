@@ -24,4 +24,26 @@ Executive Summary
 
 7	Confidential staff salaries and shareholder data in plain text	old/mediroza_db_backup_2019.sql	Critical
 
+Scope and Methodology
+
+This project work covers pentest on the target website only (https://medirozahosptal.com ),the following activities and analysis were perform to ascertain vulnerability of the website and recommends ways to improve and mitigate such vulnerabilities professionally.
+
+1.	Footprinting ( Recognisance) analysis
+2.	Username enumeration on the login page to discover vulnerability of ether the username or password.
+3.	Cracking of passwords on patients report on PDF files
+4.	Decryption of PDF patient reports files 
+5.	Accessed of backup folder with directory listing
+6.	Accessed confidential and staff files and shareholders record on plain text
+
+Methodology
+However, the project adopt the use of some inbuilt Kalilinux tools such as Curl, the website was access using SQLInjection to bypass the password and maintain access on the website.
+
+The cracking of password was achieved using networkwalks password cracker with a both small inbuilt wordlist and large wordlist for a complex password. The encryption of the PFDs was carried out using KaliLinux tool called QPDF.
+
+Finally, the content of the backup folder (Old) was revealed with the help of an AI tool ( ChatGPT)
+
+
+
+
+
  
